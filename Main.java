@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int a = 2;
-        int b = 10;
-        int c = 100;
-        int d = 50;
+        int a = 100;
+        int b = 50;
+        int c = 2;
+        int d = 10;
 
         int countPotatos = a + (int) (Math.random() * b);
         int countPackage = c + (int) (Math.random() * d);

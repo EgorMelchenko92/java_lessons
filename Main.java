@@ -1,27 +1,33 @@
 package com.melchenko;
 
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scanner = null;
 
-        int a = 2;
-        int b = 10;
-        int c = 100;
-        int d = 50;
+        try {
 
-        int countPotatos = a + (int) (Math.random() * b);
-        int countPackage = c + (int) (Math.random() * d);
+            scanner = new Scanner(new File("src/in.txt"));
 
-        System.out.println("Random count potatos: " + countPotatos);
-        System.out.println("Random count package: " + countPackage);
-        //Random number generation
+            int countPotatos = scanner.nextInt();
+            int countPackage = scanner.nextInt();
+            
+            int countPotatosIntoPackage = countPotatos/countPackage;
 
-        int countPotatosIntoPackage;
-
-        countPotatosIntoPackage=countPotatos/countPackage;
-        System.out.println("Count potatos into package: " + countPotatosIntoPackage);
-        System.out.println("Reminder potatos: " + (countPotatos-(countPackage*countPotatosIntoPackage)));
+            System.out.println("Count potatos: " + countPotatos);
+            System.out.println("Count package: " + countPackage);
+            System.out.println("Count potatos into package: " + countPotatosIntoPackage);
+            System.out.println("Reminder potatos: " + (countPotatos-(countPotatosIntoPackage*countPackage)));
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
 

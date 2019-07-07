@@ -7,6 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String[] array = new String[] {"a","б","в","г","д","е","ё","ж","з","и",
+                "й","к","л","м","н","о","п","р","с","т","у","ф","х","ц","ч","ш","щ","ъ","ы","ь","э","ю","я"};
+        int length = array.length;
+
 
             while (true) {
 
@@ -66,28 +70,25 @@ public class Main {
                                 System.out.println(" ");
 
                                 //алфавит
-                                ArrayList<Character> alphabet = new ArrayList<Character>();
-                                for (int i = 0; i < 34; i++) {
-                                    alphabet.add((char) ('а' + i));
 
-                                    if (countPackage <= i ) {
-                                        for (int j = 1; i <= countPackage && j <= i; j++) {
-                                            System.out.print("[" + j + alphabet.get(j - 1) + "]" + " ");
-                                        }
+                                if (countPackage<=length) {
+                                    for (int i = 1; i <= countPackage && i <= length; i++) {
+                                        System.out.print(i + array[i - 1] + " " );
                                     }
-                                } if (countPackage > 33) {
-                                    System.out.println("___________________________________________________");
-                                    System.out.println("It's a brother fiasco, the letters are over ");
-                                    System.out.println("You need more letters: " + (countPackage-countLetters));
-                                    System.out.println(" ");
-
+                                } else if ( countPackage>=34 ){
+                                    for ( int i = 1; i <= countPackage && i <= length; i++ ){
+                                        System.out.print( i + array[i - 1] + " " );
+                                    } for (int j =34; j <= countPackage; j++) {
+                                        System.out.print(" " + j + "Fiasko" + " ");
+                                    }
                                 }
-                            }
 
+                            }
                         }
                     } while (number <= 3);
                     break;
         }
+        System.out.println(" ");
         System.out.println("Completion of the iteration");
     }
 

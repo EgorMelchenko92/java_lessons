@@ -64,8 +64,8 @@ public class Main {
                         System.out.println(forwardSporting.toString());
                     }
                 }
-                case 4: {
-                    if (selection != 1 && selection !=2 && selection !=3 ) {
+                default: {
+                    if (selection != 1 && selection != 2 && selection != 3) {
                         System.out.println("Input error, please, try again!\n");
                     }
                 }
